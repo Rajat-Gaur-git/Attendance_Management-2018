@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            font-size: xx-large;
+            font-family: Ebrima;
+        }
+        .style3
+        {
+            font-size: xx-large;
+        }
+        .style4
+        {
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table class="style1">
+            <tr>
+                <td bgcolor="#000066" class="style2" style="text-align: center; color: #FFFFFF">
+                    <h1 class="style3">
+                        <strong style="font-size: xx-large">ATTENDANCE MANAGEMENT SYSTEM</strong></h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Menu ID="Menu1" runat="server" BackColor="#FFFF99" BorderColor="White" 
+                        BorderStyle="Dashed" ForeColor="Black" Orientation="Horizontal" 
+                        StaticSubMenuIndent="16px" Width="1500px" RenderingMode="Table" 
+                        onmenuitemclick="Menu1_MenuItemClick">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Home.aspx" Text="HOME" Value="HOME"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Login.aspx" Text="LOGIN" Value="LOGIN">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Registeration.aspx" Text="REGISTRATION" 
+                                Value="REGISTRATION"></asp:MenuItem>
+                        </Items>
+                        <StaticMenuItemStyle HorizontalPadding="150px" ItemSpacing="33px" />
+                    </asp:Menu>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="style4" style="text-align: center">
+                    <em><strong>This site is created by students of MMMUT.</strong></em></td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>
